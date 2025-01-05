@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Import Tasks - <%= username %></title>
+    <link rel="stylesheet" href="/import.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="import-container">
+      <header class="import-header">
+        <h1>Import Tasks</h1>
+        <p>Username: <%= username %></p>
+      </header>
+
+      <form
+        id="import-form"
+        action="/upload?username=<%= username %>"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <div class="form-group">
+          <label for="file-upload">Upload JSON File</label>
+          <input
+            type="file"
+            id="file-upload"
+            name="file"
+            accept=".json"
+            required
+          />
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn import-btn">
+            <i class="fas fa-upload"></i> Upload
+          </button>
+          <button
+            type="button"
+            class="btn cancel-btn"
+            onclick="window.location.href='/tasks?username=<%= username %>'"
+          >
+            <i class="fas fa-times"></i> Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="/import.js"></script>
+  </body>
+</html>

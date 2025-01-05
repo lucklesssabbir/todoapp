@@ -1,0 +1,106 @@
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+.export-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.export-header h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.export-header p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.tasks-data {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tasks-data ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tasks-data li {
+  margin-bottom: 10px;
+}
+
+.tasks-data li strong {
+  color: #ff7e5f;
+}
+
+hr {
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  margin: 10px 0;
+}
+
+.tasks-data p {
+  text-align: center;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.export-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.export-actions .btn {
+  flex: 1;
+  margin: 0 10px;
+  padding: 15px 20px;
+  background-color: #ff7e5f;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.export-actions .btn:hover {
+  transform: scale(1.05);
+}
+
+.export-actions .export-btn {
+  background-color: #00c9ff;
+}
+
+.export-actions .export-btn:hover {
+  background-color: #005f99;
+}
+
+.export-actions .home-btn {
+  background-color: #ff7e5f;
+}
+
+.export-actions .home-btn:hover {
+  background-color: #ff5a36;
+}
+
+.export-actions i {
+  margin-right: 5px;
+}

@@ -1,0 +1,117 @@
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, #f06, #ffba00);
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.new-task-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.new-task-header h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.new-task-header p {
+  text-align: center;
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 1.1rem;
+  color: #feb47b;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #feb47b;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #ff7e5f;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-group input[type='checkbox'] {
+  transform: scale(1.3);
+  margin: 0; /* Ensure no extra margin is added */
+}
+
+.checkbox-group label {
+  font-size: 1.1rem;
+  color: #feb47b;
+  cursor: pointer;
+  margin: 0; /* Align label with checkbox */
+}
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.form-actions button {
+  padding: 12px 20px;
+  background-color: #feb47b;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background-color 0.3s;
+}
+
+.form-actions button:hover {
+  transform: scale(1.1);
+  background-color: #ff7e5f;
+}
+
+.save-btn {
+  background-color: #feb47b;
+}
+
+.cancel-btn {
+  background-color: #ff7e5f;
+}
+
+.save-btn:hover {
+  background-color: #ffba00;
+}
+
+.cancel-btn:hover {
+  background-color: #f06;
+}

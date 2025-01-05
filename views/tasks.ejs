@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasks - <%= username %> | Simple To-Do App</title>
+    <link rel="stylesheet" href="/tasks.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="tasks-container">
+      <header class="tasks-header">
+        <h1>Welcome, <%= username %>!</h1>
+      </header>
+
+      <div class="tasks-tabs">
+        <button class="tab" id="done-tab">Done</button>
+        <button class="tab" id="not-done-tab">Not Done</button>
+      </div>
+
+      <div class="task-list">
+        <% if (tasks.length === 0) { %>
+        <p>No tasks available.</p>
+        <% } else { %> <% tasks.forEach(function(task) { %>
+        <div
+          class="task-item <%= task.status === 'done' ? 'done' : 'not-done' %>"
+        >
+          <input type="checkbox" id="task-<%= task.id %>" <%= task.status ===
+          'done' ? 'checked' : '' %> />
+          <label for="task-<%= task.id %>">
+            <strong><%= task.headline %></strong>
+          </label>
+
+          <div class="task-options">
+            <button class="edit-btn">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button class="delete-btn">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+        </div>
+        <% }); %> <% } %>
+      </div>
+
+      <div class="footer">
+        <button class="btn import"><i class="fas fa-upload"></i></button>
+        <button class="btn new-task">
+          <i class="fas fa-plus-circle"></i>
+        </button>
+        <button class="btn export">
+          <i class="fas fa-download"></i>
+        </button>
+      </div>
+    </div>
+    <script src="/tasks.js"></script>
+  </body>
+</html>

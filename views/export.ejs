@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Export Tasks - <%= username %></title>
+    <link rel="stylesheet" href="/export.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="export-container">
+      <header class="export-header">
+        <h1>Export Tasks</h1>
+        <p>Username: <%= username %></p>
+      </header>
+
+      <div class="tasks-data">
+        <% if (tasks.length === 0) { %>
+        <p>No tasks available to export.</p>
+        <% } else { %>
+        <ul>
+          <% tasks.forEach(function(task) { %>
+          <li>
+            <strong>Headline:</strong> <%= task.headline %><br />
+            <strong>Details:</strong> <%= task.details %><br />
+            <strong>Status:</strong> <%= task.status %><br />
+            <strong>Created At:</strong>
+            <%= new Date(task.createdAt).toLocaleString() %>
+          </li>
+          <hr />
+          <% }); %>
+        </ul>
+        <% } %>
+      </div>
+
+      <div class="export-actions">
+        <button class="btn export-btn" onclick="handleExport()">
+          <i class="fas fa-download"></i> Export as JSON
+        </button>
+        <button
+          class="btn home-btn"
+          onclick="window.location.href='/tasks?username=<%= username %>'"
+        >
+          <i class="fas fa-home"></i> Go to Home
+        </button>
+      </div>
+    </div>
+    <script>
+      function handleExport() {
+        window.location.href = `/download?username=<%= username %>`;
+      }
+    </script>
+  </body>
+</html>

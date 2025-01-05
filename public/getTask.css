@@ -1,0 +1,124 @@
+/* General styles */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #ffffff;
+}
+
+.edit-task-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.edit-task-header h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.edit-task-header p {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type='text'],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+textarea {
+  resize: none;
+}
+
+input[type='text']:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid #6a11cb;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Checkbox styles */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group input[type='checkbox'] {
+  transform: scale(1.5);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Created At styles */
+.form-group p {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Button styles */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s ease;
+}
+
+.save-btn {
+  background: #6a11cb;
+  color: #ffffff;
+}
+
+.save-btn:hover {
+  background: #5a0eb5;
+  transform: scale(1.05);
+}
+
+.cancel-btn {
+  background: #ff5757;
+  color: #ffffff;
+}
+
+.cancel-btn:hover {
+  background: #e04646;
+  transform: scale(1.05);
+}

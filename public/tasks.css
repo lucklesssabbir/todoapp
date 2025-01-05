@@ -1,0 +1,178 @@
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+.tasks-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow: auto;
+}
+
+.tasks-header h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.tasks-tabs {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.tasks-tabs .tab {
+  background: #f3fe5f;
+  color: #007bff;
+  border: solid 1px burlywood;
+  padding: 12px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  flex-grow: 1; /* Makes the buttons take more width */
+}
+
+.tasks-tabs .tab:hover {
+  background: #007bff;
+  color: white;
+}
+
+.task-list {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.task-item {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+
+.task-item.done {
+  background: rgba(0, 255, 0, 0.2);
+}
+
+.task-item.not-done {
+  background: rgba(255, 0, 0, 0.2);
+}
+
+.task-item input[type='checkbox'] {
+  margin-right: 15px;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+/* Toggle for Done / Not Done */
+.task-item input[type='checkbox']:checked + label {
+  color: rgba(0, 255, 0, 0.7);
+}
+
+.task-item label {
+  flex-grow: 1;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Task options (for Edit/Delete) */
+.task-options {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.task-item:hover .task-options,
+.task-item:active .task-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task-options button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.task-options button:hover {
+  color: #feb47b;
+}
+
+/* Mobile - Long Press to Show Edit/Delete */
+@media (max-width: 600px) {
+  .task-item:active .task-options {
+    display: flex;
+  }
+
+  .task-item input[type='checkbox']:checked + label {
+    color: #5cb85c;
+    font-weight: normal;
+  }
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.footer button {
+  background-color: #feb47b;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.footer button:hover {
+  transform: scale(1.1);
+}
+
+.footer button i {
+  font-size: 1.5rem;
+}
+
+.footer .btn.import {
+  background-color: #6a11cb;
+}
+
+.footer .btn.export {
+  background-color: #2575fc;
+}
+
+.footer .btn.new-task {
+  background-color: #ff7e5f;
+}
+
+/* Buttons hover effect */
+.footer button:hover {
+  transform: scale(1.1);
+}

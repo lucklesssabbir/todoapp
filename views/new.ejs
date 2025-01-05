@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Task - <%= username %></title>
+    <link rel="stylesheet" href="/newTask.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="new-task-container">
+      <header class="new-task-header">
+        <h1>Create New Task</h1>
+        <p class="notice">Username: <%= username %></p>
+      </header>
+
+      <form id="new-task-form" action="/createnew" method="POST">
+        <div class="form-group">
+          <label for="headline">Headline</label>
+          <input
+            type="text"
+            id="headline"
+            name="headline"
+            placeholder="Enter task headline"
+            required
+          />
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label>Status</label>
+          <input type="checkbox" id="status" name="status" />
+          <label for="status">Done</label>
+        </div>
+
+        <div class="form-group">
+          <label for="details">Details</label>
+          <textarea
+            id="details"
+            name="details"
+            placeholder="Enter task details"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn save-btn">
+            <i class="fas fa-save"></i> Save
+          </button>
+          <button
+            type="button"
+            class="btn cancel-btn"
+            onclick="window.location.href='/tasks?username=<%= username %>'"
+          >
+            <i class="fas fa-times"></i> Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="/new.js"></script>
+  </body>
+</html>

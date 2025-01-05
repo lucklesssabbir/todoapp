@@ -1,0 +1,107 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.import-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.import-header h1 {
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.import-header p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Form Styles */
+form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.form-group input[type='file'] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.form-group input[type='file']:hover {
+  border-color: #ff9a9e;
+}
+
+/* Buttons */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 15px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn.import-btn {
+  background-color: #68b684;
+  color: #fff;
+}
+
+.btn.cancel-btn {
+  background-color: #eb4d55;
+  color: #fff;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn i {
+  margin-right: 5px;
+}
+
+/* Hover Effects */
+.btn.import-btn:hover {
+  background-color: #58a172;
+}
+
+.btn.cancel-btn:hover {
+  background-color: #d33a42;
+}
