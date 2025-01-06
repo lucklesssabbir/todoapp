@@ -63,9 +63,9 @@ app.get('/tasks', (req, res) => {
 });
 app.use('/', tasksRoutes);
 app.use(advanceRoute);
-// app.use((req, res) => {
-//   res.status(404).render('error');
-// });
+ app.use((req, res) => {
+  res.status(404).render('error');
+ });
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
