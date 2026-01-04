@@ -97,7 +97,7 @@ We ❤️ contributions! Feel free to fork this repo and submit pull requests. E
 
 ## 📄 License
 
-This project is licensed under the ISC License.
+null
 
 ---
 
